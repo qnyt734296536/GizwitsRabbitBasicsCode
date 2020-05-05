@@ -3,7 +3,7 @@
 <title>Static Call Graph - [GizwitsRabbitLEDTest\GizwitsRabbitLEDTest.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image GizwitsRabbitLEDTest\GizwitsRabbitLEDTest.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Fri Apr 10 12:22:14 2020
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Tue May 05 14:22:35 2020
 <BR><P>
 <H3>Maximum Stack Usage =        264 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -318,10 +318,7 @@ Global Symbols
 <P><STRONG><a name="[d3]"></a>_ll_ushift_r</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, llushr.o(.text), UNUSED)
 
 <P><STRONG><a name="[ad]"></a>__aeabi_memcpy</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, memcpya.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;keyInitOne
-<LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizwitsHandle
-<LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;keyInit
-<LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rbWrite
+<BR><BR>[Called By]<UL><LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rbWrite
 <LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rbRead
 <LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizStandardDecompressionValue
 <LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizReportData
@@ -330,6 +327,9 @@ Global Symbols
 <LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizProtocolIssuedDataAck
 <LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizProtocolGetOnePacket
 <LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizProtocolGetDeviceInfo
+<LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;keyInitOne
+<LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizwitsHandle
+<LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;keyInit
 </UL>
 
 <P><STRONG><a name="[ac]"></a>__aeabi_memcpy4</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memcpya.o(.text))
@@ -350,12 +350,12 @@ Global Symbols
 <P><STRONG><a name="[51]"></a>__aeabi_memclr</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, memseta.o(.text))
 <BR><BR>[Calls]<UL><LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memset
 </UL>
-<BR>[Called By]<UL><LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizwitsInit
-<LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizwitsHandle
-<LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizProtocolWaitAckCheck
+<BR>[Called By]<UL><LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizProtocolWaitAckCheck
 <LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizProtocolWaitAck
 <LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizProtocolIssuedProcess
 <LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizProtocolAckHandle
+<LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizwitsInit
+<LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizwitsHandle
 </UL>
 
 <P><STRONG><a name="[90]"></a>__aeabi_memclr4</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text))
@@ -431,15 +431,15 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[59]"></a>HAL_GPIO_WritePin</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, stm32f1xx_hal_gpio.o(i.HAL_GPIO_WritePin))
-<BR><BR>[Called By]<UL><LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_GPIO_Init
-<LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Control_Led
+<BR><BR>[Called By]<UL><LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Control_Led
+<LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_GPIO_Init
 </UL>
 
 <P><STRONG><a name="[62]"></a>HAL_GetTick</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, stm32f1xx_hal.o(i.HAL_GetTick))
-<BR><BR>[Called By]<UL><LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_OscConfig
+<BR><BR>[Called By]<UL><LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Transmit
+<LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_OscConfig
 <LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_ClockConfig
 <LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_WaitOnFlagUntilTimeout
-<LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Transmit
 </UL>
 
 <P><STRONG><a name="[8e]"></a>HAL_IncTick</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, stm32f1xx_hal.o(i.HAL_IncTick))
@@ -589,13 +589,13 @@ Global Symbols
 <P><STRONG><a name="[6e]"></a>HAL_TIM_IRQHandler</STRONG> (Thumb, 358 bytes, Stack size 16 bytes, stm32f1xx_hal_tim.o(i.HAL_TIM_IRQHandler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = HAL_TIM_IRQHandler &rArr; HAL_TIM_PeriodElapsedCallback &rArr; keyHandle &rArr; readKeyValue &rArr; getKey
 </UL>
-<BR>[Calls]<UL><LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_TriggerCallback
+<BR>[Calls]<UL><LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_PeriodElapsedCallback
+<LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_TriggerCallback
 <LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_PWM_PulseFinishedCallback
 <LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_OC_DelayElapsedCallback
 <LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_IC_CaptureCallback
 <LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIMEx_CommutCallback
 <LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIMEx_BreakCallback
-<LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_PeriodElapsedCallback
 </UL>
 <BR>[Called By]<UL><LI><a href="#[26]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM2_IRQHandler
 </UL>
@@ -660,8 +660,8 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[85]"></a>HAL_UART_Receive_IT</STRONG> (Thumb, 82 bytes, Stack size 0 bytes, stm32f1xx_hal_uart.o(i.HAL_UART_Receive_IT))
-<BR><BR>[Called By]<UL><LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uartInit
-<LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_RxCpltCallback
+<BR><BR>[Called By]<UL><LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_RxCpltCallback
+<LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uartInit
 </UL>
 
 <P><STRONG><a name="[83]"></a>HAL_UART_RxCpltCallback</STRONG> (Thumb, 34 bytes, Stack size 8 bytes, gizwits_product.o(i.HAL_UART_RxCpltCallback))
@@ -811,15 +811,7 @@ Global Symbols
 <P><STRONG><a name="[9b]"></a>__2printf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printf8.o(i.__0printf$8))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = __2printf
 </UL>
-<BR>[Called By]<UL><LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizwitsSetMode
-<LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizwitsInit
-<LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizwitsHandle
-<LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
-<LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;key2ShortPress
-<LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;key2LongPress
-<LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;key1ShortPress
-<LI><a href="#[4b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;key1LongPress
-<LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizReportData
+<BR>[Called By]<UL><LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizReportData
 <LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizProtocolWaitAckCheck
 <LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizProtocolWaitAck
 <LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizProtocolResendData
@@ -840,6 +832,14 @@ Global Symbols
 <LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizPutData
 <LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uartWrite
 <LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizwitsEventProcess
+<LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizwitsSetMode
+<LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizwitsInit
+<LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizwitsHandle
+<LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;key2ShortPress
+<LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;key2LongPress
+<LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;key1ShortPress
+<LI><a href="#[4b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;key1LongPress
 </UL>
 
 <P><STRONG><a name="[db]"></a>__scatterload_copy</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_copy), UNUSED)
@@ -849,14 +849,14 @@ Global Symbols
 <P><STRONG><a name="[dd]"></a>__scatterload_zeroinit</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_zeroinit), UNUSED)
 
 <P><STRONG><a name="[a6]"></a>exchangeBytes</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, common.o(i.exchangeBytes))
-<BR><BR>[Called By]<UL><LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizwitsSetMode
-<LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizReportData
+<BR><BR>[Called By]<UL><LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizReportData
 <LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizProtocolNTP
 <LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizProtocolModuleStatus
 <LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizProtocolGetOnePacket
 <LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizProtocolGetDeviceInfo
 <LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizProtocolErrorCmd
 <LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizProtocolCommonAck
+<LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizwitsSetMode
 </UL>
 
 <P><STRONG><a name="[b5]"></a>exchangeWord</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, common.o(i.exchangeWord))
@@ -891,31 +891,31 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[9a]"></a>gizGetTimerCount</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, gizwits_product.o(i.gizGetTimerCount))
-<BR><BR>[Called By]<UL><LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizwitsHandle
-<LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizProtocolWaitAck
+<BR><BR>[Called By]<UL><LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizProtocolWaitAck
 <LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizProtocolResendData
 <LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizProtocolAckHandle
 <LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizDevReportPolicy
 <LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizCheckReport
+<LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizwitsHandle
 </UL>
 
 <P><STRONG><a name="[a7]"></a>gizProtocolSum</STRONG> (Thumb, 36 bytes, Stack size 8 bytes, common.o(i.gizProtocolSum))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = gizProtocolSum
 </UL>
-<BR>[Called By]<UL><LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizwitsSetMode
-<LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizReportData
+<BR>[Called By]<UL><LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizReportData
 <LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizProtocolIssuedDataAck
 <LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizProtocolGetOnePacket
 <LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizProtocolGetDeviceInfo
 <LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizProtocolErrorCmd
 <LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizProtocolCommonAck
+<LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizwitsSetMode
 </UL>
 
 <P><STRONG><a name="[84]"></a>gizPutData</STRONG> (Thumb, 40 bytes, Stack size 16 bytes, gizwits_protocol.o(i.gizPutData))
 <BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = gizPutData &rArr; rbWrite &rArr;  rbWrite (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
-<LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rbWrite
+<BR>[Calls]<UL><LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rbWrite
+<LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
 <BR>[Called By]<UL><LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_RxCpltCallback
 </UL>
@@ -931,9 +931,9 @@ Global Symbols
 <P><STRONG><a name="[9d]"></a>gizStandardDecompressionValue</STRONG> (Thumb, 130 bytes, Stack size 80 bytes, datapointtools.o(i.gizStandardDecompressionValue))
 <BR><BR>[Stack]<UL><LI>Max Depth = 92<LI>Call Chain = gizStandardDecompressionValue &rArr; gizByteOrderExchange
 </UL>
-<BR>[Calls]<UL><LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
+<BR>[Calls]<UL><LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizByteOrderExchange
 <LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizAcrossByteJudge
-<LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizByteOrderExchange
+<LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
 </UL>
 <BR>[Called By]<UL><LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizDataPoint2Event
 </UL>
@@ -945,8 +945,8 @@ Global Symbols
 <P><STRONG><a name="[ba]"></a>gizwitsEventProcess</STRONG> (Thumb, 246 bytes, Stack size 40 bytes, gizwits_product.o(i.gizwitsEventProcess))
 <BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = gizwitsEventProcess &rArr; __2printf
 </UL>
-<BR>[Calls]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
-<LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Control_Led
+<BR>[Calls]<UL><LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Control_Led
+<LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
 <BR>[Called By]<UL><LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizwitsHandle
 </UL>
@@ -954,10 +954,7 @@ Global Symbols
 <P><STRONG><a name="[bb]"></a>gizwitsHandle</STRONG> (Thumb, 560 bytes, Stack size 88 bytes, gizwits_protocol.o(i.gizwitsHandle))
 <BR><BR>[Stack]<UL><LI>Max Depth = 264<LI>Call Chain = gizwitsHandle &rArr; gizProtocolGetDeviceInfo &rArr; uartWrite &rArr; __2printf
 </UL>
-<BR>[Calls]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
-<LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr
-<LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
-<LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizProtocolWaitAckCheck
+<BR>[Calls]<UL><LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizProtocolWaitAckCheck
 <LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizProtocolNTP
 <LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizProtocolModuleStatus
 <LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizProtocolIssuedProcess
@@ -971,6 +968,9 @@ Global Symbols
 <LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mcuRestart
 <LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizwitsEventProcess
 <LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizGetTimerCount
+<LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
+<LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr
+<LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
 </UL>
 <BR>[Called By]<UL><LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
@@ -978,9 +978,9 @@ Global Symbols
 <P><STRONG><a name="[bd]"></a>gizwitsInit</STRONG> (Thumb, 46 bytes, Stack size 8 bytes, gizwits_protocol.o(i.gizwitsInit))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = gizwitsInit &rArr; __2printf
 </UL>
-<BR>[Calls]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
+<BR>[Calls]<UL><LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rbCreate
+<LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 <LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr
-<LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rbCreate
 </UL>
 <BR>[Called By]<UL><LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
@@ -988,12 +988,12 @@ Global Symbols
 <P><STRONG><a name="[bf]"></a>gizwitsSetMode</STRONG> (Thumb, 222 bytes, Stack size 48 bytes, gizwits_protocol.o(i.gizwitsSetMode))
 <BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = gizwitsSetMode &rArr; uartWrite &rArr; __2printf
 </UL>
-<BR>[Calls]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
-<LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizProtocolSum
+<BR>[Calls]<UL><LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizProtocolSum
 <LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;exchangeBytes
 <LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizProtocolWaitAck
 <LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizProtocolHeadInit
 <LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uartWrite
+<LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
 <BR>[Called By]<UL><LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;key2ShortPress
 <LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;key2LongPress
@@ -1094,25 +1094,25 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rbCapacity
 </UL>
-<BR>[Called By]<UL><LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rbCanWrite
-<LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rbRead
+<BR>[Called By]<UL><LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rbRead
 <LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizProtocolGetOnePacket
+<LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rbCanWrite
 </UL>
 
 <P><STRONG><a name="[ca]"></a>rbCanWrite</STRONG> (Thumb, 28 bytes, Stack size 4 bytes, ringbuffer.o(i.rbCanWrite))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = rbCanWrite &rArr; rbCanRead
 </UL>
-<BR>[Calls]<UL><LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rbCapacity
-<LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rbCanRead
+<BR>[Calls]<UL><LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rbCanRead
+<LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rbCapacity
 </UL>
 <BR>[Called By]<UL><LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rbWrite
 </UL>
 
 <P><STRONG><a name="[c9]"></a>rbCapacity</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, ringbuffer.o(i.rbCapacity))
-<BR><BR>[Called By]<UL><LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rbCanWrite
-<LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rbWrite
+<BR><BR>[Called By]<UL><LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rbWrite
 <LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rbRead
 <LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rbCanRead
+<LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rbCanWrite
 </UL>
 
 <P><STRONG><a name="[be]"></a>rbCreate</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, ringbuffer.o(i.rbCreate))
@@ -1123,10 +1123,10 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 28 + In Cycle
 <LI>Call Chain = rbRead &rArr;  rbRead (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
-<LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rbCapacity
-<LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rbRead
+<BR>[Calls]<UL><LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rbRead
 <LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rbCanRead
+<LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rbCapacity
+<LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
 </UL>
 <BR>[Called By]<UL><LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rbRead
 <LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizProtocolGetOnePacket
@@ -1136,10 +1136,10 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 32 + In Cycle
 <LI>Call Chain = rbWrite &rArr;  rbWrite (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
+<BR>[Calls]<UL><LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rbWrite
 <LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rbCapacity
 <LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rbCanWrite
-<LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rbWrite
+<LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
 </UL>
 <BR>[Called By]<UL><LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rbWrite
 <LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizPutData
@@ -1168,16 +1168,16 @@ Global Symbols
 <P><STRONG><a name="[a8]"></a>uartWrite</STRONG> (Thumb, 140 bytes, Stack size 24 bytes, gizwits_product.o(i.uartWrite))
 <BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = uartWrite &rArr; __2printf
 </UL>
-<BR>[Calls]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
-<LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Transmit_IT
+<BR>[Calls]<UL><LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Transmit_IT
+<LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
-<BR>[Called By]<UL><LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizwitsSetMode
-<LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizReportData
+<BR>[Called By]<UL><LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizReportData
 <LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizProtocolResendData
 <LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizProtocolIssuedDataAck
 <LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizProtocolGetDeviceInfo
 <LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizProtocolErrorCmd
 <LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizProtocolCommonAck
+<LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizwitsSetMode
 </UL>
 
 <P><STRONG><a name="[c7]"></a>userHandle</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, gizwits_product.o(i.userHandle))
@@ -1191,6 +1191,206 @@ Global Symbols
 <H3>
 Local Symbols
 </H3>
+<P><STRONG><a name="[99]"></a>gizCheckReport</STRONG> (Thumb, 112 bytes, Stack size 16 bytes, gizwits_protocol.o(i.gizCheckReport))
+<BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = gizCheckReport &rArr; __2printf
+</UL>
+<BR>[Calls]<UL><LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizGetTimerCount
+<LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
+</UL>
+<BR>[Called By]<UL><LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizDevReportPolicy
+</UL>
+
+<P><STRONG><a name="[9c]"></a>gizDataPoint2Event</STRONG> (Thumb, 206 bytes, Stack size 32 bytes, gizwits_protocol.o(i.gizDataPoint2Event))
+<BR><BR>[Stack]<UL><LI>Max Depth = 124<LI>Call Chain = gizDataPoint2Event &rArr; gizStandardDecompressionValue &rArr; gizByteOrderExchange
+</UL>
+<BR>[Calls]<UL><LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizStandardDecompressionValue
+<LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
+</UL>
+<BR>[Called By]<UL><LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizProtocolIssuedProcess
+</UL>
+
+<P><STRONG><a name="[9e]"></a>gizDataPoints2ReportData</STRONG> (Thumb, 102 bytes, Stack size 16 bytes, gizwits_protocol.o(i.gizDataPoints2ReportData))
+<BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = gizDataPoints2ReportData &rArr; __2printf
+</UL>
+<BR>[Calls]<UL><LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizStandardCompressValue
+<LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizByteOrderExchange
+<LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
+</UL>
+<BR>[Called By]<UL><LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizProtocolIssuedProcess
+<LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizDevReportPolicy
+</UL>
+
+<P><STRONG><a name="[a1]"></a>gizDevReportPolicy</STRONG> (Thumb, 120 bytes, Stack size 24 bytes, gizwits_protocol.o(i.gizDevReportPolicy))
+<BR><BR>[Stack]<UL><LI>Max Depth = 104<LI>Call Chain = gizDevReportPolicy &rArr; gizReportData &rArr; uartWrite &rArr; __2printf
+</UL>
+<BR>[Calls]<UL><LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizReportData
+<LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizDataPoints2ReportData
+<LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizCheckReport
+<LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizGetTimerCount
+<LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
+</UL>
+<BR>[Called By]<UL><LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizwitsHandle
+</UL>
+
+<P><STRONG><a name="[a3]"></a>gizProtocolAckHandle</STRONG> (Thumb, 80 bytes, Stack size 8 bytes, gizwits_protocol.o(i.gizProtocolAckHandle))
+<BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = gizProtocolAckHandle &rArr; gizProtocolResendData &rArr; uartWrite &rArr; __2printf
+</UL>
+<BR>[Calls]<UL><LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizProtocolResendData
+<LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizGetTimerCount
+<LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
+<LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr
+</UL>
+<BR>[Called By]<UL><LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizwitsHandle
+</UL>
+
+<P><STRONG><a name="[a5]"></a>gizProtocolCommonAck</STRONG> (Thumb, 80 bytes, Stack size 24 bytes, gizwits_protocol.o(i.gizProtocolCommonAck))
+<BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = gizProtocolCommonAck &rArr; uartWrite &rArr; __2printf
+</UL>
+<BR>[Calls]<UL><LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizProtocolSum
+<LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;exchangeBytes
+<LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uartWrite
+<LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
+</UL>
+<BR>[Called By]<UL><LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizwitsHandle
+</UL>
+
+<P><STRONG><a name="[a9]"></a>gizProtocolErrorCmd</STRONG> (Thumb, 88 bytes, Stack size 24 bytes, gizwits_protocol.o(i.gizProtocolErrorCmd))
+<BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = gizProtocolErrorCmd &rArr; uartWrite &rArr; __2printf
+</UL>
+<BR>[Calls]<UL><LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizProtocolSum
+<LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;exchangeBytes
+<LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizProtocolHeadInit
+<LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uartWrite
+<LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
+</UL>
+<BR>[Called By]<UL><LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizwitsHandle
+</UL>
+
+<P><STRONG><a name="[ab]"></a>gizProtocolGetDeviceInfo</STRONG> (Thumb, 180 bytes, Stack size 128 bytes, gizwits_protocol.o(i.gizProtocolGetDeviceInfo))
+<BR><BR>[Stack]<UL><LI>Max Depth = 176<LI>Call Chain = gizProtocolGetDeviceInfo &rArr; uartWrite &rArr; __2printf
+</UL>
+<BR>[Calls]<UL><LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizProtocolSum
+<LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;exchangeBytes
+<LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizProtocolHeadInit
+<LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uartWrite
+<LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
+<LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy4
+<LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
+</UL>
+<BR>[Called By]<UL><LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizwitsHandle
+</UL>
+
+<P><STRONG><a name="[ae]"></a>gizProtocolGetOnePacket</STRONG> (Thumb, 298 bytes, Stack size 40 bytes, gizwits_protocol.o(i.gizProtocolGetOnePacket))
+<BR><BR>[Stack]<UL><LI>Max Depth = 68<LI>Call Chain = gizProtocolGetOnePacket &rArr; rbRead &rArr;  rbRead (Cycle)
+</UL>
+<BR>[Calls]<UL><LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rbRead
+<LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rbCanRead
+<LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizProtocolSum
+<LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;exchangeBytes
+<LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
+<LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
+</UL>
+<BR>[Called By]<UL><LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizwitsHandle
+</UL>
+
+<P><STRONG><a name="[aa]"></a>gizProtocolHeadInit</STRONG> (Thumb, 32 bytes, Stack size 8 bytes, gizwits_protocol.o(i.gizProtocolHeadInit))
+<BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = gizProtocolHeadInit &rArr; __2printf
+</UL>
+<BR>[Calls]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
+</UL>
+<BR>[Called By]<UL><LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizReportData
+<LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizProtocolGetDeviceInfo
+<LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizProtocolErrorCmd
+<LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizwitsSetMode
+</UL>
+
+<P><STRONG><a name="[b1]"></a>gizProtocolIssuedDataAck</STRONG> (Thumb, 198 bytes, Stack size 72 bytes, gizwits_protocol.o(i.gizProtocolIssuedDataAck))
+<BR><BR>[Stack]<UL><LI>Max Depth = 120<LI>Call Chain = gizProtocolIssuedDataAck &rArr; uartWrite &rArr; __2printf
+</UL>
+<BR>[Calls]<UL><LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizProtocolSum
+<LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uartWrite
+<LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
+<LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
+</UL>
+<BR>[Called By]<UL><LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizwitsHandle
+</UL>
+
+<P><STRONG><a name="[b2]"></a>gizProtocolIssuedProcess</STRONG> (Thumb, 190 bytes, Stack size 40 bytes, gizwits_protocol.o(i.gizProtocolIssuedProcess))
+<BR><BR>[Stack]<UL><LI>Max Depth = 164<LI>Call Chain = gizProtocolIssuedProcess &rArr; gizDataPoint2Event &rArr; gizStandardDecompressionValue &rArr; gizByteOrderExchange
+</UL>
+<BR>[Calls]<UL><LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizDataPoints2ReportData
+<LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizDataPoint2Event
+<LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
+<LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr
+<LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
+</UL>
+<BR>[Called By]<UL><LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizwitsHandle
+</UL>
+
+<P><STRONG><a name="[b3]"></a>gizProtocolModuleStatus</STRONG> (Thumb, 574 bytes, Stack size 24 bytes, gizwits_protocol.o(i.gizProtocolModuleStatus))
+<BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = gizProtocolModuleStatus &rArr; __2printf
+</UL>
+<BR>[Calls]<UL><LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;exchangeBytes
+<LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
+</UL>
+<BR>[Called By]<UL><LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizwitsHandle
+</UL>
+
+<P><STRONG><a name="[b4]"></a>gizProtocolNTP</STRONG> (Thumb, 84 bytes, Stack size 8 bytes, gizwits_protocol.o(i.gizProtocolNTP))
+<BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = gizProtocolNTP &rArr; __2printf
+</UL>
+<BR>[Calls]<UL><LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;exchangeWord
+<LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;exchangeBytes
+<LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
+</UL>
+<BR>[Called By]<UL><LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizwitsHandle
+</UL>
+
+<P><STRONG><a name="[a4]"></a>gizProtocolResendData</STRONG> (Thumb, 54 bytes, Stack size 8 bytes, gizwits_protocol.o(i.gizProtocolResendData))
+<BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = gizProtocolResendData &rArr; uartWrite &rArr; __2printf
+</UL>
+<BR>[Calls]<UL><LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uartWrite
+<LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizGetTimerCount
+<LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
+</UL>
+<BR>[Called By]<UL><LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizProtocolAckHandle
+</UL>
+
+<P><STRONG><a name="[b6]"></a>gizProtocolWaitAck</STRONG> (Thumb, 66 bytes, Stack size 16 bytes, gizwits_protocol.o(i.gizProtocolWaitAck))
+<BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = gizProtocolWaitAck &rArr; __2printf
+</UL>
+<BR>[Calls]<UL><LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizGetTimerCount
+<LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
+<LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr
+<LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
+</UL>
+<BR>[Called By]<UL><LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizReportData
+<LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizwitsSetMode
+</UL>
+
+<P><STRONG><a name="[b7]"></a>gizProtocolWaitAckCheck</STRONG> (Thumb, 42 bytes, Stack size 8 bytes, gizwits_protocol.o(i.gizProtocolWaitAckCheck))
+<BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = gizProtocolWaitAckCheck &rArr; __2printf
+</UL>
+<BR>[Calls]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
+<LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr
+</UL>
+<BR>[Called By]<UL><LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizwitsHandle
+</UL>
+
+<P><STRONG><a name="[a2]"></a>gizReportData</STRONG> (Thumb, 124 bytes, Stack size 32 bytes, gizwits_protocol.o(i.gizReportData))
+<BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = gizReportData &rArr; uartWrite &rArr; __2printf
+</UL>
+<BR>[Calls]<UL><LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizProtocolSum
+<LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;exchangeBytes
+<LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizProtocolWaitAck
+<LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizProtocolHeadInit
+<LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uartWrite
+<LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
+<LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
+</UL>
+<BR>[Called By]<UL><LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizDevReportPolicy
+</UL>
+
 <P><STRONG><a name="[6d]"></a>TIM_ITRx_SetConfig</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, stm32f1xx_hal_tim.o(i.TIM_ITRx_SetConfig))
 <BR><BR>[Called By]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_ConfigClockSource
 </UL>
@@ -1250,206 +1450,6 @@ Local Symbols
 <BR>[Calls]<UL><LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GetTick
 </UL>
 <BR>[Called By]<UL><LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Transmit
-</UL>
-
-<P><STRONG><a name="[99]"></a>gizCheckReport</STRONG> (Thumb, 112 bytes, Stack size 16 bytes, gizwits_protocol.o(i.gizCheckReport))
-<BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = gizCheckReport &rArr; __2printf
-</UL>
-<BR>[Calls]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
-<LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizGetTimerCount
-</UL>
-<BR>[Called By]<UL><LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizDevReportPolicy
-</UL>
-
-<P><STRONG><a name="[9c]"></a>gizDataPoint2Event</STRONG> (Thumb, 206 bytes, Stack size 32 bytes, gizwits_protocol.o(i.gizDataPoint2Event))
-<BR><BR>[Stack]<UL><LI>Max Depth = 124<LI>Call Chain = gizDataPoint2Event &rArr; gizStandardDecompressionValue &rArr; gizByteOrderExchange
-</UL>
-<BR>[Calls]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
-<LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizStandardDecompressionValue
-</UL>
-<BR>[Called By]<UL><LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizProtocolIssuedProcess
-</UL>
-
-<P><STRONG><a name="[9e]"></a>gizDataPoints2ReportData</STRONG> (Thumb, 102 bytes, Stack size 16 bytes, gizwits_protocol.o(i.gizDataPoints2ReportData))
-<BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = gizDataPoints2ReportData &rArr; __2printf
-</UL>
-<BR>[Calls]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
-<LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizStandardCompressValue
-<LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizByteOrderExchange
-</UL>
-<BR>[Called By]<UL><LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizProtocolIssuedProcess
-<LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizDevReportPolicy
-</UL>
-
-<P><STRONG><a name="[a1]"></a>gizDevReportPolicy</STRONG> (Thumb, 120 bytes, Stack size 24 bytes, gizwits_protocol.o(i.gizDevReportPolicy))
-<BR><BR>[Stack]<UL><LI>Max Depth = 104<LI>Call Chain = gizDevReportPolicy &rArr; gizReportData &rArr; uartWrite &rArr; __2printf
-</UL>
-<BR>[Calls]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
-<LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizReportData
-<LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizDataPoints2ReportData
-<LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizCheckReport
-<LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizGetTimerCount
-</UL>
-<BR>[Called By]<UL><LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizwitsHandle
-</UL>
-
-<P><STRONG><a name="[a3]"></a>gizProtocolAckHandle</STRONG> (Thumb, 80 bytes, Stack size 8 bytes, gizwits_protocol.o(i.gizProtocolAckHandle))
-<BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = gizProtocolAckHandle &rArr; gizProtocolResendData &rArr; uartWrite &rArr; __2printf
-</UL>
-<BR>[Calls]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
-<LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr
-<LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizProtocolResendData
-<LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizGetTimerCount
-</UL>
-<BR>[Called By]<UL><LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizwitsHandle
-</UL>
-
-<P><STRONG><a name="[a5]"></a>gizProtocolCommonAck</STRONG> (Thumb, 80 bytes, Stack size 24 bytes, gizwits_protocol.o(i.gizProtocolCommonAck))
-<BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = gizProtocolCommonAck &rArr; uartWrite &rArr; __2printf
-</UL>
-<BR>[Calls]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
-<LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizProtocolSum
-<LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;exchangeBytes
-<LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uartWrite
-</UL>
-<BR>[Called By]<UL><LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizwitsHandle
-</UL>
-
-<P><STRONG><a name="[a9]"></a>gizProtocolErrorCmd</STRONG> (Thumb, 88 bytes, Stack size 24 bytes, gizwits_protocol.o(i.gizProtocolErrorCmd))
-<BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = gizProtocolErrorCmd &rArr; uartWrite &rArr; __2printf
-</UL>
-<BR>[Calls]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
-<LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizProtocolSum
-<LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;exchangeBytes
-<LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizProtocolHeadInit
-<LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uartWrite
-</UL>
-<BR>[Called By]<UL><LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizwitsHandle
-</UL>
-
-<P><STRONG><a name="[ab]"></a>gizProtocolGetDeviceInfo</STRONG> (Thumb, 180 bytes, Stack size 128 bytes, gizwits_protocol.o(i.gizProtocolGetDeviceInfo))
-<BR><BR>[Stack]<UL><LI>Max Depth = 176<LI>Call Chain = gizProtocolGetDeviceInfo &rArr; uartWrite &rArr; __2printf
-</UL>
-<BR>[Calls]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
-<LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy4
-<LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
-<LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizProtocolSum
-<LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;exchangeBytes
-<LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizProtocolHeadInit
-<LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uartWrite
-</UL>
-<BR>[Called By]<UL><LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizwitsHandle
-</UL>
-
-<P><STRONG><a name="[ae]"></a>gizProtocolGetOnePacket</STRONG> (Thumb, 298 bytes, Stack size 40 bytes, gizwits_protocol.o(i.gizProtocolGetOnePacket))
-<BR><BR>[Stack]<UL><LI>Max Depth = 68<LI>Call Chain = gizProtocolGetOnePacket &rArr; rbRead &rArr;  rbRead (Cycle)
-</UL>
-<BR>[Calls]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
-<LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
-<LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rbRead
-<LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rbCanRead
-<LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizProtocolSum
-<LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;exchangeBytes
-</UL>
-<BR>[Called By]<UL><LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizwitsHandle
-</UL>
-
-<P><STRONG><a name="[aa]"></a>gizProtocolHeadInit</STRONG> (Thumb, 32 bytes, Stack size 8 bytes, gizwits_protocol.o(i.gizProtocolHeadInit))
-<BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = gizProtocolHeadInit &rArr; __2printf
-</UL>
-<BR>[Calls]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
-</UL>
-<BR>[Called By]<UL><LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizwitsSetMode
-<LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizReportData
-<LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizProtocolGetDeviceInfo
-<LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizProtocolErrorCmd
-</UL>
-
-<P><STRONG><a name="[b1]"></a>gizProtocolIssuedDataAck</STRONG> (Thumb, 198 bytes, Stack size 72 bytes, gizwits_protocol.o(i.gizProtocolIssuedDataAck))
-<BR><BR>[Stack]<UL><LI>Max Depth = 120<LI>Call Chain = gizProtocolIssuedDataAck &rArr; uartWrite &rArr; __2printf
-</UL>
-<BR>[Calls]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
-<LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
-<LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizProtocolSum
-<LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uartWrite
-</UL>
-<BR>[Called By]<UL><LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizwitsHandle
-</UL>
-
-<P><STRONG><a name="[b2]"></a>gizProtocolIssuedProcess</STRONG> (Thumb, 190 bytes, Stack size 40 bytes, gizwits_protocol.o(i.gizProtocolIssuedProcess))
-<BR><BR>[Stack]<UL><LI>Max Depth = 164<LI>Call Chain = gizProtocolIssuedProcess &rArr; gizDataPoint2Event &rArr; gizStandardDecompressionValue &rArr; gizByteOrderExchange
-</UL>
-<BR>[Calls]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
-<LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr
-<LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
-<LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizDataPoints2ReportData
-<LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizDataPoint2Event
-</UL>
-<BR>[Called By]<UL><LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizwitsHandle
-</UL>
-
-<P><STRONG><a name="[b3]"></a>gizProtocolModuleStatus</STRONG> (Thumb, 574 bytes, Stack size 24 bytes, gizwits_protocol.o(i.gizProtocolModuleStatus))
-<BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = gizProtocolModuleStatus &rArr; __2printf
-</UL>
-<BR>[Calls]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
-<LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;exchangeBytes
-</UL>
-<BR>[Called By]<UL><LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizwitsHandle
-</UL>
-
-<P><STRONG><a name="[b4]"></a>gizProtocolNTP</STRONG> (Thumb, 84 bytes, Stack size 8 bytes, gizwits_protocol.o(i.gizProtocolNTP))
-<BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = gizProtocolNTP &rArr; __2printf
-</UL>
-<BR>[Calls]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
-<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;exchangeWord
-<LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;exchangeBytes
-</UL>
-<BR>[Called By]<UL><LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizwitsHandle
-</UL>
-
-<P><STRONG><a name="[a4]"></a>gizProtocolResendData</STRONG> (Thumb, 54 bytes, Stack size 8 bytes, gizwits_protocol.o(i.gizProtocolResendData))
-<BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = gizProtocolResendData &rArr; uartWrite &rArr; __2printf
-</UL>
-<BR>[Calls]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
-<LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uartWrite
-<LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizGetTimerCount
-</UL>
-<BR>[Called By]<UL><LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizProtocolAckHandle
-</UL>
-
-<P><STRONG><a name="[b6]"></a>gizProtocolWaitAck</STRONG> (Thumb, 66 bytes, Stack size 16 bytes, gizwits_protocol.o(i.gizProtocolWaitAck))
-<BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = gizProtocolWaitAck &rArr; __2printf
-</UL>
-<BR>[Calls]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
-<LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr
-<LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
-<LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizGetTimerCount
-</UL>
-<BR>[Called By]<UL><LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizwitsSetMode
-<LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizReportData
-</UL>
-
-<P><STRONG><a name="[b7]"></a>gizProtocolWaitAckCheck</STRONG> (Thumb, 42 bytes, Stack size 8 bytes, gizwits_protocol.o(i.gizProtocolWaitAckCheck))
-<BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = gizProtocolWaitAckCheck &rArr; __2printf
-</UL>
-<BR>[Calls]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
-<LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr
-</UL>
-<BR>[Called By]<UL><LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizwitsHandle
-</UL>
-
-<P><STRONG><a name="[a2]"></a>gizReportData</STRONG> (Thumb, 124 bytes, Stack size 32 bytes, gizwits_protocol.o(i.gizReportData))
-<BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = gizReportData &rArr; uartWrite &rArr; __2printf
-</UL>
-<BR>[Calls]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
-<LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
-<LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizProtocolSum
-<LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;exchangeBytes
-<LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizProtocolWaitAck
-<LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizProtocolHeadInit
-<LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uartWrite
-</UL>
-<BR>[Called By]<UL><LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gizDevReportPolicy
 </UL>
 
 <P><STRONG><a name="[94]"></a>_printf_core</STRONG> (Thumb, 996 bytes, Stack size 104 bytes, printf8.o(i._printf_core), UNUSED)
